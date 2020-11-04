@@ -107,6 +107,7 @@
       <div class="house__title">Коттедж Modern <br> Лос Анджелес</div>
       <div><a class="house__link" href="#">Забронировать</a></div>
   </div>
+  <div id="YMapsID" style="width: 450px; height: 350px;"></div>
   <!-- footer -->
   <footer class="footer">
     <div class="container--content">
@@ -187,6 +188,22 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9049fa78-893b-4486-b23b-3938a27b3ab4&load=Map&lang=ru_RU"
+ type="text/javascript"></script>
+<script type="text/javascript">
+  ymaps.ready(function () {  
+    var map = new ymaps.Map("map", {
+      center: [55.76, 37.64], 
+      zoom: 10
+    });
+
+    // if (map) {
+    //   ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
+    //     var placemark = new Placemark([55.37, 35.45]);
+    //   });
+    // }
+  });
+</script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
