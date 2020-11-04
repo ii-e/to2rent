@@ -107,7 +107,6 @@
       <div class="house__title">Коттедж Modern <br> Лос Анджелес</div>
       <div><a class="house__link" href="#">Забронировать</a></div>
   </div>
-  <div id="map" class="map container"></div>
   <!-- footer -->
   <footer class="footer">
     <div class="container--content">
@@ -188,32 +187,6 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script> -->
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=0ea33aa5-6871-445b-b177-3c95839f4fc8&lang=ru_RU" type="text/javascript">
-  </script>
-<script type="text/javascript">
-  ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
-  function init () {
-    myMap = new ymaps.Map("map", {
-			center: [37.240439,67.286040], // Координаты центра карты
-			zoom: 13 // Маштаб карты
-		}); 
-	
-		myMap.controls.add(
-			new ymaps.control.ZoomControl()  // Добавление элемента управления картой
-		); 
-	
-		myPlacemark = new ymaps.Placemark([37.240439,67.286040], { // Координаты метки объекта
-			balloonContent: "<div class='ya_map'>Заезжайте в гости!</div>" // Подсказка метки
-		}, {
-			preset: "twirl#redDotIcon" // Тип метки
-		});
-		
-		myMap.geoObjects.add(myPlacemark); // Добавление метки
-		myPlacemark.balloon.open(); // Открытие подсказки метки
-  };
-</script>
-
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
